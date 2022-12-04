@@ -1,0 +1,1 @@
+document.getElementById('entries-form').addEventListener('submit', onEntriesSubmit);
