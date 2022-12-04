@@ -50,7 +50,7 @@ const drawGroups = (groups) => {
 
 const createGroupsFromEntries = entries => {
     const groupsCount = Math.floor(entries.length / PARTICIPANTS_PER_GROUP) || 1;
-    const entriesCount = entries < PARTICIPANTS_PER_GROUP ? entries : PARTICIPANTS_PER_GROUP;
+    const entriesCount = entries.length < PARTICIPANTS_PER_GROUP ? entries.length : PARTICIPANTS_PER_GROUP;
     const groups = [];
 
     for(let groupIndex = 0; groupIndex < groupsCount; groupIndex++) {
@@ -103,5 +103,4 @@ const nextRound = () => {
   
   if(names.length === 1) { return drawWinner(names[0]); }
   drawGroups(createGroupsFromEntries(names));
-
 }
